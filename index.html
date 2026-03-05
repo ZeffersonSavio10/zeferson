@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zeffer Squin Group</title>
+  <meta name="description" content="Zeffer Squin Group — A diversified conglomerate operating across cybersecurity, hospitality, international trade, technology, real estate, and strategic consulting." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <canvas id="particle-canvas"></canvas>
+  <div class="grain"></div>
+
+  <!-- NAV -->
+  <nav id="main-nav">
+    <button class="nav-logo" onclick="navigate('home')">
+      <div class="logo-box">
+        <div class="logo-inner"></div>
+        <span class="logo-letter">Z</span>
+      </div>
+      <div>
+        <div class="logo-name">ZEFFER SQUIN</div>
+        <div class="logo-sub">GROUP</div>
+      </div>
+    </button>
+
+    <div class="nav-links">
+      <button class="nav-link active" data-page="home" onclick="navigate('home')">Home</button>
+      <button class="nav-link" data-page="about" onclick="navigate('about')">About</button>
+      <button class="nav-link" data-page="divisions" onclick="navigate('divisions')">Divisions</button>
+      <button class="nav-link" data-page="contact" onclick="navigate('contact')">Contact</button>
+      <div class="nav-dots" id="nav-dots"></div>
+    </div>
+
+    <button class="nav-cta" onclick="navigate('contact')">Get in Touch ↗</button>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main id="app"></main>
+
+  <!-- FOOTER -->
+  <footer id="main-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-box"><span>Z</span></div>
+            <div class="footer-logo-name">ZEFFER SQUIN GROUP</div>
+          </div>
+          <p class="footer-desc">A diversified conglomerate operating at the intersection of technology, hospitality, and global trade.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <div class="footer-col-title">Navigate</div>
+            <button onclick="navigate('home')">Home</button>
+            <button onclick="navigate('about')">About</button>
+            <button onclick="navigate('divisions')">Divisions</button>
+            <button onclick="navigate('contact')">Contact</button>
+          </div>
+          <div class="footer-col" id="footer-divisions"></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2024 Zeffer Squin Group. All rights reserved.</span>
+        <span class="footer-motto">EXCELLENCE · TRUST · INNOVATION · COLLABORATION</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="particles.js"></script>
+  <script src="pages.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
