@@ -1,79 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zeffer Squin Group</title>
-  <meta name="description" content="Zeffer Squin Group — A diversified conglomerate operating across cybersecurity, hospitality, international trade, technology, real estate, and strategic consulting." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <title>Lospalos Boxing Club | LBC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lospalos Boxing Club (LBC) – Professional boxing club in Timor-Leste developing local, national and international champions.">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
-  <canvas id="particle-canvas"></canvas>
-  <div class="grain"></div>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
 
-  <!-- NAV -->
-  <nav id="main-nav">
-    <button class="nav-logo" onclick="navigate('home')">
-      <div class="logo-box">
-        <div class="logo-inner"></div>
-        <span class="logo-letter">Z</span>
-      </div>
-      <div>
-        <div class="logo-name">ZEFFER SQUIN</div>
-        <div class="logo-sub">GROUP</div>
-      </div>
-    </button>
+<!-- NAV -->
+<nav id="mainNav">
+    <a href="#home" class="nav-brand">
+        <img src="images/logo.jpg" alt="LBC Logo" class="nav-logo">
+        <span class="nav-name">L.<span>B</span>.C</span>
+    </a>
+    <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#athletes">Athletes</a></li>
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact" class="nav-cta">Join Now</a></li>
+    </ul>
+</nav>
 
-    <div class="nav-links">
-      <button class="nav-link active" data-page="home" onclick="navigate('home')">Home</button>
-      <button class="nav-link" data-page="about" onclick="navigate('about')">About</button>
-      <button class="nav-link" data-page="divisions" onclick="navigate('divisions')">Divisions</button>
-      <button class="nav-link" data-page="contact" onclick="navigate('contact')">Contact</button>
-      <div class="nav-dots" id="nav-dots"></div>
-    </div>
-
-    <button class="nav-cta" onclick="navigate('contact')">Get in Touch ↗</button>
-  </nav>
-
-  <!-- MAIN CONTENT -->
-  <main id="app"></main>
-
-  <!-- FOOTER -->
-  <footer id="main-footer">
-    <div class="footer-inner">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="footer-logo">
-            <div class="footer-logo-box"><span>Z</span></div>
-            <div class="footer-logo-name">ZEFFER SQUIN GROUP</div>
-          </div>
-          <p class="footer-desc">A diversified conglomerate operating at the intersection of technology, hospitality, and global trade.</p>
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-gradient"></div>
+    <div class="hero-accent"></div>
+    <div class="hero-content">
+        <p class="hero-eyebrow">Lospalos · Timor-Leste · Est. 2025</p>
+        <h1 class="hero-title">
+            DISCIPLINE<br>
+            <span class="outline">BUILDS</span><br>
+            <span class="red">CHAMPIONS</span>
+        </h1>
+        <p class="hero-sub">Where fighters are forged. Where champions are born. Join Lospalos Boxing Club and fight for something greater.</p>
+        <div class="hero-actions">
+            <a href="#programs" class="btn-primary">Start Training</a>
+            <a href="#athletes" class="btn-ghost">Our Athletes</a>
         </div>
-        <div class="footer-links">
-          <div class="footer-col">
-            <div class="footer-col-title">Navigate</div>
-            <button onclick="navigate('home')">Home</button>
-            <button onclick="navigate('about')">About</button>
-            <button onclick="navigate('divisions')">Divisions</button>
-            <button onclick="navigate('contact')">Contact</button>
-          </div>
-          <div class="footer-col" id="footer-divisions"></div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2024 Zeffer Squin Group. All rights reserved.</span>
-        <span class="footer-motto">EXCELLENCE · TRUST · INNOVATION · COLLABORATION</span>
-      </div>
     </div>
-  </footer>
+    <div class="hero-stats">
+        <div>
+            <div class="stat-num">4<span>+</span></div>
+            <div class="stat-label">Champion Athletes</div>
+        </div>
+        <div>
+            <div class="stat-num">3</div>
+            <div class="stat-label">Training Levels</div>
+        </div>
+        <div>
+            <div class="stat-num">1<span>st</span></div>
+            <div class="stat-label">International Titles</div>
+        </div>
+    </div>
+    <div class="scroll-hint">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+    </div>
+</section>
 
-  <script src="data.js"></script>
-  <script src="particles.js"></script>
-  <script src="pages.js"></script>
-  <script src="app.js"></script>
+<!-- ABOUT -->
+<section id="about">
+    <div class="about-wrap">
+        <div class="about-text reveal">
+            <p class="section-label">About the Club</p>
+            <h2 class="section-title">MORE THAN<br>A GYM</h2>
+            <div class="divider"></div>
+            <p>Lospalos Boxing Club was established in 2025 in Fuiloro Village, Lospalos — Lautem District, Timor-Leste. We were built to develop and support boxing athletes at every level: local, national, and international.</p>
+            <p>L.B.C is not just a training place. It is a home for fighters committed to transforming their lives through boxing and representing their community and country on the world stage.</p>
+            <p>Our foundation is built on four pillars: <strong>Discipline, Consistency, Hard Work,</strong> and a <strong>Champion's Mindset.</strong></p>
+        </div>
+        <div class="about-img-wrap reveal reveal-delay-2">
+            <img src="images/ko.png" alt="LBC Training">
+            <div class="about-badge">
+                <div class="num">2025</div>
+                <div class="txt">Founded</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ATHLETES -->
+<section id="athletes">
+    <div class="athletes-outer">
+        <div class="athletes-header">
+            <div class="reveal">
+                <p class="section-label">Our Fighters</p>
+                <h2 class="section-title">CHAMPIONS</h2>
+            </div>
+            <div class="athletes-controls reveal reveal-delay-2">
+                <button class="slider-btn" id="prevBtn">&#8592;</button>
+                <span class="slider-counter"><span id="currentSlide">1</span> / <span id="totalSlides">4</span></span>
+                <button class="slider-btn" id="nextBtn">&#8594;</button>
+            </div>
+        </div>
+
+        <div class="athletes-track-wrap" id="trackWrap">
+            <div class="athletes-grid" id="athletesTrack">
+                <div class="athlete-card">
+                    <img src="images/fabio.jpeg" alt="Fabio, LBC Fighter">
+                    <div class="athlete-overlay">
+                        <div class="athlete-num">01 · LBC</div>
+                        <div class="athlete-name">FABIO</div>
+                        <div class="athlete-achievements">
+                            <div class="achievement-item"><span class="gold">🥇</span> BWS Champions — Jakarta 2025</div>
+                            <div class="achievement-item"><span class="gold">🥈</span> National Championship — TL 2023</div>
+                            <div class="achievement-item">🥉 National Championship — TL 2025</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="athlete-card">
+                    <img src="images/no.jpeg" alt="Lucas Mundo Novo, LBC Fighter">
+                    <div class="athlete-overlay">
+                        <div class="athlete-num">02 · LBC</div>
+                        <div class="athlete-name">LUCAS<br>MUNDO NOVO</div>
+                        <div class="athlete-achievements">
+                            <div class="achievement-item"><span class="gold">🥇</span> 1st Place — Medan 2025</div>
+                            <div class="achievement-item"><span class="gold">🥈</span> 2nd Place — Jakarta</div>
+                            <div class="achievement-item">🥉 National Championship — TL 2025</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="athlete-card">
+                    <img src="images/je.jpeg" alt="Nazario Soares, LBC Fighter">
+                    <div class="athlete-overlay">
+                        <div class="athlete-num">03 · LBC</div>
+                        <div class="athlete-name">NAZARIO<br>SOARES</div>
+                        <div class="athlete-achievements">
+                            <div class="achievement-item"><span class="gold">🥇</span> ISKA Champion — Indonesia 2025</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="athlete-card">
+                    <img src="images/ade.jpeg" alt="Aderito Ferreira, LBC Fighter">
+                    <div class="athlete-overlay">
+                        <div class="athlete-num">04 · LBC</div>
+                        <div class="athlete-name">ADERITO<br>FERREIRA</div>
+                        <div class="athlete-achievements">
+                            <div class="achievement-item"><span class="gold">🥇</span> Exhibition Lospalos Fight 2025</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-dots" id="sliderDots"></div>
+    </div>
+</section>
+
+<!-- COACHING STAFF / FOUNDER -->
+<section class="team-section" id="team">
+    <div class="team-inner">
+        <div class="reveal">
+            <p class="section-label">Leadership</p>
+            <h2 class="section-title">COACHING STAFF</h2>
+        </div>
+
+        <div class="team-grid">
+
+            <!-- Founder -->
+            <div class="team-card founder-card reveal">
+                <div class="team-card-img">
+                    <img src="images/fo.jpg" alt="Zefferson Savio Quintas">
+                    <div class="team-card-img-overlay"></div>
+                    <div class="team-ring-wrap">
+                        <div class="team-ring"></div>
+                    </div>
+                </div>
+                <div class="team-card-body">
+                    <span class="team-card-badge">Founder</span>
+                    <div class="team-card-name">ZEFFERSON<br>SAVIO QUINTAS</div>
+                    <div class="team-card-role">Founder &amp; Assistant Coach</div>
+                    <div class="team-card-divider"></div>
+                    <p class="team-card-bio">With a vision to put Timor-Leste on the international boxing map, Zefferson built L.B.C from the ground up. His philosophy: train harder than your competition, and let discipline do the rest.</p>
+                </div>
+            </div>
+
+            <!-- Coach 2 -->
+            <div class="team-card reveal reveal-delay-2">
+                <div class="team-card-img">
+                    <img src="images/coach2.jpg" alt="Coach 2">
+                    <div class="team-card-img-overlay"></div>
+                </div>
+                <div class="team-card-body">
+                    <span class="team-card-badge">Head Coach</span>
+                    <div class="team-card-name">NAMA<br>COACH 2</div>
+                    <div class="team-card-role">Head Coach — L.B.C</div>
+                    <div class="team-card-divider"></div>
+                    <p class="team-card-bio">Ganti teks ini dengan bio Coach 2. Tambahkan pengalaman, prestasi, dan filosofi melatih.</p>
+                </div>
+            </div>
+
+            <!-- Coach 3 -->
+            <div class="team-card reveal reveal-delay-3">
+                <div class="team-card-img">
+                    <img src="images/coach3.jpg" alt="Coach 3">
+                    <div class="team-card-img-overlay"></div>
+                </div>
+                <div class="team-card-body">
+                    <span class="team-card-badge">Strength Coach</span>
+                    <div class="team-card-name">NAMA<br>COACH 3</div>
+                    <div class="team-card-role">Strength &amp; Conditioning — L.B.C</div>
+                    <div class="team-card-divider"></div>
+                    <p class="team-card-bio">Ganti teks ini dengan bio Coach 3. Tambahkan pengalaman, prestasi, dan filosofi melatih.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PROGRAMS -->
+<section class="programs-outer" id="programs">
+    <div class="programs-inner">
+        <div class="reveal">
+            <p class="section-label">Training</p>
+            <h2 class="section-title">PROGRAMS</h2>
+        </div>
+        <div class="programs-grid">
+            <div class="program-card reveal">
+                <div class="program-num">01</div>
+                <p class="program-level">Level One</p>
+                <h3 class="program-title">BEGINNER</h3>
+                <p class="program-desc">Master the fundamentals. Build stamina, discipline, and the technical foundation that every elite boxer needs.</p>
+                <div class="program-tags">
+                    <span class="program-tag">Footwork</span>
+                    <span class="program-tag">Basic Combos</span>
+                    <span class="program-tag">Conditioning</span>
+                </div>
+            </div>
+            <div class="program-card reveal reveal-delay-2">
+                <div class="program-num">02</div>
+                <p class="program-level">Level Two</p>
+                <h3 class="program-title">AMATEUR</h3>
+                <p class="program-desc">Intensive training, live sparring, and advanced strategy. Prepare your mind and body for competitive boxing.</p>
+                <div class="program-tags">
+                    <span class="program-tag">Sparring</span>
+                    <span class="program-tag">Strategy</span>
+                    <span class="program-tag">Ring IQ</span>
+                </div>
+            </div>
+            <div class="program-card reveal reveal-delay-3">
+                <div class="program-num">03</div>
+                <p class="program-level">Level Three</p>
+                <h3 class="program-title">FIGHTER</h3>
+                <p class="program-desc">Full tournament preparation and elite athlete development. Fight for titles. Represent your country.</p>
+                <div class="program-tags">
+                    <span class="program-tag">Competition</span>
+                    <span class="program-tag">Peak Performance</span>
+                    <span class="program-tag">Camp Training</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SOCIAL MEDIA -->
+<section id="social">
+    <div class="social-outer">
+        <div class="reveal">
+            <p class="section-label">Follow Us</p>
+            <h2 class="section-title">STAY CONNECTED</h2>
+        </div>
+        <div class="social-grid reveal">
+            <a href="https://instagram.com/lospalosboxingclub" target="_blank" class="social-card ig">
+                <div class="social-icon">📸</div>
+                <div class="social-name">INSTAGRAM</div>
+                <div class="social-handle">@lospalosboxingclub</div>
+            </a>
+            <a href="https://youtube.com/@lospalosboxingclub" target="_blank" class="social-card yt">
+                <div class="social-icon">▶️</div>
+                <div class="social-name">YOUTUBE</div>
+                <div class="social-handle">@lospalosboxingclub</div>
+            </a>
+            <a href="https://tiktok.com/@lospalosboxingclub" target="_blank" class="social-card tt">
+                <div class="social-icon">🎵</div>
+                <div class="social-name">TIKTOK</div>
+                <div class="social-handle">@lospalosboxingclub</div>
+            </a>
+            <a href="https://www.facebook.com/l.b.c.302672/" target="_blank" class="social-card fb">
+                <div class="social-icon">👥</div>
+                <div class="social-name">FACEBOOK</div>
+                <div class="social-handle">L.B.C</div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-outer" id="contact">
+    <div class="contact-inner">
+        <div>
+            <div class="reveal">
+                <p class="section-label">Get In Touch</p>
+                <h2 class="section-title">CONTACT</h2>
+            </div>
+            <div class="contact-info">
+                <div class="contact-row reveal">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <div class="contact-row-label">Location</div>
+                        <div class="contact-row-value">Fuiloro Village, Lospalos<br>Lautem District, Timor-Leste</div>
+                    </div>
+                </div>
+                <div class="contact-row reveal reveal-delay-1">
+                    <div class="contact-icon">📞</div>
+                    <div>
+                        <div class="contact-row-label">WhatsApp</div>
+                        <div class="contact-row-value">+670 76753886</div>
+                    </div>
+                </div>
+                <div class="contact-row reveal reveal-delay-2">
+                    <div class="contact-icon">📧</div>
+                    <div>
+                        <div class="contact-row-label">Email</div>
+                        <div class="contact-row-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a8c4cacbe8cfc5c9c1c486cbc7c5">[email&#160;protected]</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact-cta reveal reveal-delay-2">
+            <h3>READY TO FIGHT?</h3>
+            <p>Whether you're a complete beginner or a seasoned competitor, L.B.C has a place for you. Come train with champions.</p>
+            <a href="https://wa.me/67076753886" target="_blank" class="btn-white">WhatsApp Us Now</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-brand">L.<span>B</span>.C — LOSPALOS BOXING CLUB</div>
+    <p>© 2026 Lospalos Boxing Club · Timor-Leste · All rights reserved</p>
+</footer>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
